@@ -1,0 +1,49 @@
+{% include 'header.html' %}
+
+
+<div class="container p-4">
+    <div class="text-center fw-bold p-2 box " style="font-size:2.8vw;">PROJECTS</div>
+
+    <div class="card-deck">
+        {% for n in ProjectData %}
+        
+        {% if forloop.counter0|divisibleby:3 %} <!-- Check if the index is divisible by 3 to start a new row -->
+        <div class="row">
+        {% endif %}
+        
+        <div class="col-md-4"> <!-- Use col-md-4 to make each card take up 4 columns in a row -->
+            <div class="card p-2 m-2" style="width: 18rem;">
+                {% if n.project_img %} <!-- Check if project_img is not null -->
+                <img src="/media/{{n.project_img}}" class="card-img-top" alt="...">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{n.project_name}}</h5>
+                    <p class="card-text">{{n.work_des}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>Client Name : </b>{{n.client_name}}</li>
+                    <li class="list-group-item"><b>Location : </b>{{n.project_location}}</li>
+                    {% if n.start_date %} <!-- Check if start_date is not null -->
+                    <li class="list-group-item"><b>Project Status : </b>{{n.project_status}}</li>
+                    <li class="list-group-item"><b>Start Date : </b>{{n.start_date}}</li>
+                    {% endif %}
+                    {% if n.end_date %} <!-- Check if end_date is not null -->
+                    <li class="list-group-item"><b>End Date : </b>{{n.end_date}}</li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        
+        {% if forloop.counter|divisibleby:3 or forloop.last %} <!-- Check if the index is a multiple of 3 or it's the last iteration to end the row -->
+        </div>
+        {% endif %}
+        
+        {% endfor %}
+    </div>
+    
+  
+  
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+.navigation{
+    background-color:#e5b7b7
+}
+
+.nav-link {
+    font-size: 1.6vw;
+    font-family: 'Times New Roman', Times, serif;
+} 
+@media screen and (max-width: 768px) {
+    .nav-link {
+        font-size: 13px; /* Adjust the font size as per your preference */
+    }
+}
+
+.nav-item.active a.nav-link {
+    color: rgb(255, 255, 255) !important; /* Change this to the desired text color */
+}
+
+.p_img{
+    width:25vw;
+    margin-top:3vw;
+}
+@media screen and (max-width: 768px) {
+    .p_img {
+        width:100px;
+    }
+}
+
+.p_txt{
+    font-size:2vw;
+    margin-top:2vw;
+    margin-bottom:3vw;
+}
+@media screen and (max-width: 768px) {
+    .p_txt {
+        font-size: 12px;
+    }
+}
+
+.crsl_txt {
+    font-size: 2vw;
+}
+.crsl_txt_2{
+    font-size: 1.5vw;
+}
+@media screen and (max-width: 768px) {
+    .crsl_txt{
+        font-size: 15px;
+    }
+    .crsl_txt_2{
+        font-size: 12px;
+    }
+}
+
+.box {
+    background-color: #e5b7b7;
+    margin: 1vw 25vw 2vw 25vw;
+    border-radius: 1.4vw;
+}
+
+.in_txt li{
+    font-size: 1.5vw;
+}
+@media screen and (max-width: 768px) {
+    .in_txt li{
+        font-size: 12px;
+    }
+}
+
+
+
+.in_txt{
+    font-size: 1.5vw;
+}
+@media screen and (max-width: 768px) {
+    .in_txt {
+        font-size: 12px;
+    }
+}
+
+
+.cn_txt{
+    font-size: 2vw;
+}
+@media screen and (max-width: 768px) {
+    .cn_txt{
+        font-size: 16px;
+    }
+}
